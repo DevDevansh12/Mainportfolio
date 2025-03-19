@@ -14,7 +14,6 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Frontend Development Card */}
           <div className="bg-[#1E1E1E] p-6 rounded-lg">
             <div className="flex items-center mb-4">
               <span className="text-2xl text-purple-400 mr-2">&lt;&gt;</span>
@@ -25,8 +24,6 @@ const Services = () => {
               latest technologies.
             </p>
           </div>
-
-          {/* UX Design Card */}
           <div className="bg-[#1E1E1E] p-6 rounded-lg">
             <div className="flex items-center mb-4">
               <span className="text-2xl text-purple-400 mr-2">#</span>

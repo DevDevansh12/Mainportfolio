@@ -19,15 +19,15 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
             <p className="text-6xl text-[#7C96FE] font-bold mb-2">10+</p>
-            <p className="text-lg font-light">Worked on projects</p>
+            <p className="text-lg font-light">Personal Projects</p>
           </div>
           <div>
             <p className="text-6xl text-[#7C96FE] font-bold mb-2">8+</p>
-            <p className="text-lg font-light">Technologies mastered</p>
+            <p className="text-lg font-light">Technologies Explored</p>
           </div>
           <div>
-            <p className="text-6xl text-[#7C96FE] font-bold mb-2">15+</p>
-            <p className="text-lg font-light"></p>
+            <p className="text-6xl text-[#7C96FE] font-bold mb-2">3+</p>
+            <p className="text-lg font-light">Challenge completed</p>
           </div>
         </div>
       </div>

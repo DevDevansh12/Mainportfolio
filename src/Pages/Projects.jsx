@@ -1,5 +1,6 @@
 import React from "react";
-
+import Img from "../assets/ss.png";
+import Link from "react-dom";
 const Projects = () => {
   return (
     <div className="bg-[#0A0A13] text-white py-16 px-6 md:px-20 lg:px-32">
@@ -21,14 +22,16 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative">
-            <img
-              src="path/to/ecommerce-project.jpg" // Replace with actual image path
-              alt="E-commerce Platform"
-              className="w-full rounded-lg"
-            />
-            <p className="absolute bottom-4 left-4 text-sm bg-black bg-opacity-50 p-2 rounded-md">
-              E-commerce platform for selling digital products
-            </p>
+            <a href="https://medico-ashy.vercel.app/" target="_blank">
+              <img
+                src={Img} // Replace with actual image path
+                alt="Medico"
+                className="w-full rounded-lg"
+              />
+              <p className="absolute bottom-4 left-4 text-sm bg-black bg-opacity-50 p-2 rounded-md">
+                Medico : Doctor Appointment Website
+              </p>
+            </a>
           </div>
 
           <div className="relative">
