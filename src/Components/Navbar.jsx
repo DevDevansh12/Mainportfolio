@@ -26,7 +26,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
           to="/#home"
           className="text-white font-bold text-xl font-body"
           smooth
-          onClick={() => mobileMenuOpen && setMobileMenuOpen(false)} // Close menu on click
+          onClick={() => mobileMenuOpen && setMobileMenuOpen(false)}
         >
           Devansh
         </HashLink>
@@ -43,6 +43,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
             )}
           </button>
         </div>
+
         <div className="hidden md:flex space-x-4 items-center">
           <HashLink
             to="/#about"
@@ -82,6 +83,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
           </motion.button>
         </div>
       </div>
+
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -96,7 +98,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
                 to="/#about"
                 smooth
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={() => setMobileMenuOpen(false)} // Close menu on click
+                onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </HashLink>
@@ -104,7 +106,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
                 to="/#projects"
                 smooth
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={() => setMobileMenuOpen(false)} // Close menu on click
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Projects
               </HashLink>
@@ -112,7 +114,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
                 to="/#services"
                 smooth
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={() => setMobileMenuOpen(false)} // Close menu on click
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </HashLink>
