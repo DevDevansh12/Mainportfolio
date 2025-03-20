@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import image from "../assets/Designer.png";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion, useAnimation } from "framer-motion";
+import { IoDocumentText } from "react-icons/io5";
 
 const BannerDesign = () => {
   const headingRef = useRef(null);
@@ -50,12 +51,31 @@ const BannerDesign = () => {
             and impactful digital experiences.
           </p>
           <div className="flex flex-wrap space-x-4 mt-8">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-700 hover:to-purple-800 text-gray-300 py-3 px-6 rounded-lg font-bold font-body mb-2">
-              Get in touch
-            </button>
-            <button className="bg-[#374151] hover:bg-[#4b5563] text-gray-300 py-3 px-6 rounded-lg font-bold font-body mb-2">
-              Learn more
-            </button>
+            <a href="mailto:74devanshvariya@gmail.com" target="_blank">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-700 hover:to-purple-800 text-gray-300 py-3 px-6 rounded-lg font-bold font-body mb-2">
+                Get in touch
+              </button>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1-iH7D5b4VJ5BlLkE0szsyt9jk2rkkyDz/view?usp=sharing"
+              target="_blank"
+              style={{ display: "inline-block" }}
+            >
+              <button
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "12px 24px",
+                  backgroundColor: "#374151",
+                  color: "#e5e7eb",
+                  borderRadius: "8px",
+                  fontWeight: "bold",
+                }}
+              >
+                <IoDocumentText size={26} style={{ marginRight: "8px" }} />
+                My Resume
+              </button>
+            </a>
           </div>
         </div>
         <div className="flex justify-center">

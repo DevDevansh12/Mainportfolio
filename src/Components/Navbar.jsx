@@ -21,14 +21,14 @@ function Navbar({ onToggleMode, isDesignerMode }) {
 
   const closeMobileMenuAndNavigate = (to) => {
     setMobileMenuOpen(false);
-    // Delay navigation to allow animation to complete
+
     setTimeout(() => {
       window.location.hash = to;
       window.scrollTo({
         top: document.querySelector(to).offsetTop,
         behavior: "smooth",
       });
-    }, 300); // 300ms matches the animation duration
+    }, 300);
   };
 
   return (
