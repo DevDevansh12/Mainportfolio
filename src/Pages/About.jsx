@@ -48,7 +48,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Social Links Section */}
         <div className="flex justify-center flex-wrap gap-10">
           <a
             href={socialLinks.github}
