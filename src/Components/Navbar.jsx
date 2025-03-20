@@ -25,6 +25,8 @@ function Navbar({ onToggleMode, isDesignerMode }) {
         <HashLink
           to="/#home"
           className="text-white font-bold text-xl font-body"
+          smooth
+          onClick={() => mobileMenuOpen && setMobileMenuOpen(false)} // Close menu on click
         >
           Devansh
         </HashLink>
@@ -46,6 +48,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
             to="/#about"
             smooth
             className="text-gray-300 hover:text-white font-body"
+            onClick={() => mobileMenuOpen && setMobileMenuOpen(false)}
           >
             About
           </HashLink>
@@ -53,6 +56,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
             to="/#projects"
             smooth
             className="text-gray-300 hover:text-white font-body"
+            onClick={() => mobileMenuOpen && setMobileMenuOpen(false)}
           >
             Projects
           </HashLink>
@@ -60,6 +64,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
             to="/#services"
             smooth
             className="text-gray-300 hover:text-white font-body"
+            onClick={() => mobileMenuOpen && setMobileMenuOpen(false)}
           >
             Services
           </HashLink>
@@ -91,7 +96,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
                 to="/#about"
                 smooth
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={toggleMobileMenu}
+                onClick={() => setMobileMenuOpen(false)} // Close menu on click
               >
                 About
               </HashLink>
@@ -99,7 +104,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
                 to="/#projects"
                 smooth
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={toggleMobileMenu}
+                onClick={() => setMobileMenuOpen(false)} // Close menu on click
               >
                 Projects
               </HashLink>
@@ -107,7 +112,7 @@ function Navbar({ onToggleMode, isDesignerMode }) {
                 to="/#services"
                 smooth
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={toggleMobileMenu}
+                onClick={() => setMobileMenuOpen(false)} // Close menu on click
               >
                 Services
               </HashLink>
