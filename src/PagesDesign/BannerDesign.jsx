@@ -45,10 +45,9 @@ const BannerDesign = () => {
               Hello, I'm <br /> Devansh.
             </span>
           </h1>
-          <p className="text-lg md:text-xl mt-4 font-body">
-            An experienced full-stack website developer with a passion for{" "}
-            <br />
-            crafting unique digital experiences.
+          <p className="text-lg md:text-xl mt-5 font-body">
+            A passionate aspiring designer, dedicated to crafting unique <br />
+            and impactful digital experiences.
           </p>
           <div className="flex flex-wrap space-x-4 mt-8">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-700 hover:to-purple-800 text-gray-300 py-3 px-6 rounded-lg font-bold font-body mb-2">

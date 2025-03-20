@@ -11,7 +11,8 @@ import DesignerPortfolio from "./Pages/DesignerPortfolio";
 import BannerDesign from "./PagesDesign/BannerDesign";
 import AboutDesign from "./PagesDesign/AboutDesign";
 import ProjectsDesigning from "./PagesDesign/ProjectsDesigning";
-
+import ServicesDesign from "./Pages/ServicesDesign";
+import GetInTouchDesign from "./Pages/GetInTouchDesign";
 function App() {
   const [showDesigner, setShowDesigner] = useState(false);
 
@@ -34,10 +35,10 @@ function App() {
             <ProjectsDesigning />
           </div>
           <div id="services">
-            <Services />
+            <ServicesDesign />
           </div>
           <div id="getintouch">
-            <GetInTouch />
+            <GetInTouchDesign />
           </div>
         </div>
       ) : (

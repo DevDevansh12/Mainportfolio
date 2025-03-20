@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Services = () => {
+const ServicesDesign = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const services = [
@@ -90,8 +90,8 @@ const Services = () => {
     <div className="bg-[#0A0A13] text-white py-16 px-6 md:px-20 lg:px-32">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <h2 className="text-4xl font-bold mb-2">Need more info?</h2>
-          <p className="text-4xl font-bold text-[#EB531A] mb-4">I got you.</p>
+          <h2 className="text-3xl font-bold mb-2">Need more info?</h2>
+          <p className="text-3xl font-bold text-[#7C96FE] mb-4">I got you.</p>
           <p className="text-lg font-light">
             Here are some of the services I offer. If you have any questions,
             feel free to reach out.
@@ -109,7 +109,7 @@ const Services = () => {
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="flex items-center mb-4">
-                <span className="text-2xl text-[#EB531A] mr-2">
+                <span className="text-2xl text-[#7C96FE] mr-2">
                   {service.icon}
                 </span>
                 <h3 className="text-xl font-semibold">{service.title}</h3>
@@ -123,4 +123,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesDesign;

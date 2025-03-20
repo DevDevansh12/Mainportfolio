@@ -19,6 +19,18 @@ function Navbar({ onToggleMode, isDesignerMode }) {
   const designerButtonHoverColor = "hover:from-blue-700 hover:to-purple-800";
   const developmentButtonHoverColor = "hover:from-red-700 hover:to-orange-800";
 
+  const closeMobileMenuAndNavigate = (to) => {
+    setMobileMenuOpen(false);
+    // Delay navigation to allow animation to complete
+    setTimeout(() => {
+      window.location.hash = to;
+      window.scrollTo({
+        top: document.querySelector(to).offsetTop,
+        behavior: "smooth",
+      });
+    }, 300); // 300ms matches the animation duration
+  };
+
   return (
     <nav className="bg-[#101012] p-4 sticky top-0 z-10">
       <div className="container mx-auto flex justify-between items-center">
@@ -94,30 +106,24 @@ function Navbar({ onToggleMode, isDesignerMode }) {
             className="md:hidden mt-2"
           >
             <div className="flex flex-col space-y-2">
-              <HashLink
-                to="/#about"
-                smooth
+              <button
+                onClick={() => closeMobileMenuAndNavigate("#about")}
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </HashLink>
-              <HashLink
-                to="/#projects"
-                smooth
+              </button>
+              <button
+                onClick={() => closeMobileMenuAndNavigate("#projects")}
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={() => setMobileMenuOpen(false)}
               >
                 Projects
-              </HashLink>
-              <HashLink
-                to="/#services"
-                smooth
+              </button>
+              <button
+                onClick={() => closeMobileMenuAndNavigate("#services")}
                 className="text-gray-300 hover:text-white font-body block py-2 px-4"
-                onClick={() => setMobileMenuOpen(false)}
               >
                 Services
-              </HashLink>
+              </button>
               <motion.button
                 onClick={handleToggle}
                 className={`text-white font-bold py-2 px-4 rounded ${

@@ -6,8 +6,8 @@ const Projects = () => {
     <div className="bg-[#0A0A13] text-white py-16 px-6 md:px-20 lg:px-32">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center mb-4">
-          <span className="text-sm text-[#7893ff] mr-2">✦</span>
-          <h2 className="text-4xl text-[#7893ff] uppercase font-semibold">
+          <span className="text-sm text-[#eb531a] mr-2">✦</span>
+          <h2 className="text-4xl text-[#eb531a] uppercase font-bold">
             Projects
           </h2>
         </div>

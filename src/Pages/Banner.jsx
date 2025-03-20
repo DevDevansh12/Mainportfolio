@@ -38,9 +38,9 @@ const Banner = () => {
               Hello, I'm <br /> Devansh.
             </span>
           </h1>
-          <p className="text-lg md:text-xl mt-4 font-body">
-            Passionate about leveraging full-stack expertise to create <br />
-            seamless digital experiences that solve real-world problems.
+          <p className="text-lg md:text-xl mt-6 font-body">
+            Passionate about creating user-centered that lead to seamless <br />
+            digital experiences and solve real-world challenges.
           </p>
           <div className="flex flex-wrap space-x-4 mt-8">
             <button className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-700 hover:to-orange-800 text-gray-300 py-3 px-6 rounded-lg font-bold font-body mb-2">

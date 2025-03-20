@@ -35,15 +35,15 @@ const AboutUs = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
           <div>
-            <p className="text-6xl text-[#7C96FE] font-bold mb-2">10+</p>
+            <p className="text-6xl text-[#eb531a] font-bold mb-2">10+</p>
             <p className="text-lg font-light">Personal Projects</p>
           </div>
           <div>
-            <p className="text-6xl text-[#7C96FE] font-bold mb-2">8+</p>
+            <p className="text-6xl text-[#eb531a] font-bold mb-2">8+</p>
             <p className="text-lg font-light">Technologies Explored</p>
           </div>
           <div>
-            <p className="text-6xl text-[#7C96FE] font-bold mb-2">3+</p>
+            <p className="text-6xl text-[#eb531a] font-bold mb-2">3+</p>
             <p className="text-lg font-light">Challenge completed</p>
           </div>
         </div>
@@ -53,7 +53,7 @@ const AboutUs = () => {
             href={socialLinks.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl mx-2 my-1 hover:text-[#7C96FE]"
+            className="text-2xl mx-2 my-1 hover:text-[#eb531a]"
           >
             <FaGithub />
           </a>
@@ -61,7 +61,7 @@ const AboutUs = () => {
             href={socialLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl mx-2 my-1 hover:text-[#7C96FE]"
+            className="text-2xl mx-2 my-1 hover:text-[#eb531a]"
           >
             <FaLinkedin />
           </a>
@@ -69,7 +69,7 @@ const AboutUs = () => {
             href={socialLinks.behance}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl mx-2 my-1 hover:text-[#7C96FE]"
+            className="text-2xl mx-2 my-1 hover:text-[#eb531a]"
           >
             <FaBehance />
           </a>
@@ -77,7 +77,7 @@ const AboutUs = () => {
             href={socialLinks.dribbble}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl mx-2 my-1 hover:text-[#7C96FE]"
+            className="text-2xl mx-2 my-1 hover:text-[#eb531a]"
           >
             <FaDribbble />
           </a>
@@ -85,7 +85,7 @@ const AboutUs = () => {
             href={socialLinks.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl mx-2 my-1 hover:text-[#7C96FE]"
+            className="text-2xl mx-2 my-1 hover:text-[#eb531a]"
           >
             <FaTwitter />
           </a>
@@ -93,7 +93,7 @@ const AboutUs = () => {
             href={socialLinks.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl mx-2 my-1 hover:text-[#7C96FE]"
+            className="text-2xl mx-2 my-1 hover:text-[#eb531a]"
           >
             <FaInstagram />
           </a>
