@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import react-icons
+import { FaBars, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
-function Navbar() {
+function Navbar({ onToggleMode, isDesignerMode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const handleToggle = () => {
+    onToggleMode(!isDesignerMode);
+  };
+
+  const designerButtonColor = "bg-gradient-to-r from-blue-500 to-purple-600";
+  const developmentButtonColor = "bg-gradient-to-r from-red-500 to-orange-600";
+  const designerButtonHoverColor = "hover:from-blue-700 hover:to-purple-800";
+  const developmentButtonHoverColor = "hover:from-red-700 hover:to-orange-800";
+
   return (
-    <nav className="bg-[#111113] p-4 sticky top-0 z-10">
+    <nav className="bg-[#101012] p-4 sticky top-0 z-10">
       <div className="container mx-auto flex justify-between items-center">
         <HashLink
           to="/#home"
@@ -19,7 +29,6 @@ function Navbar() {
           Devansh
         </HashLink>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
@@ -32,7 +41,7 @@ function Navbar() {
             )}
           </button>
         </div>
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4 items-center">
           <HashLink
             to="/#about"
             smooth
@@ -54,36 +63,70 @@ function Navbar() {
           >
             Services
           </HashLink>
+          <motion.button
+            onClick={handleToggle}
+            className={`text-white font-bold py-2 px-4 rounded ${
+              isDesignerMode
+                ? `${designerButtonColor} ${designerButtonHoverColor}`
+                : `${developmentButtonColor} ${developmentButtonHoverColor}`
+            }`}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            {isDesignerMode ? "Development Mode" : "Designer Mode"}
+          </motion.button>
         </div>
       </div>
-      <div className={`md:hidden ${mobileMenuOpen ? "block" : "hidden"} mt-2`}>
-        <div className="flex flex-col space-y-2">
-          <HashLink
-            to="/about"
-            smooth
-            className="text-gray-300 hover:text-white font-body block py-2 px-4"
-            onClick={toggleMobileMenu}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden mt-2"
           >
-            About
-          </HashLink>
-          <HashLink
-            to="/projects"
-            smooth
-            className="text-gray-300 hover:text-white font-body block py-2 px-4"
-            onClick={toggleMobileMenu}
-          >
-            Projects
-          </HashLink>
-          <HashLink
-            to="/#services"
-            smooth
-            className="text-gray-300 hover:text-white font-body block py-2 px-4"
-            onClick={toggleMobileMenu}
-          >
-            Services
-          </HashLink>
-        </div>
-      </div>
+            <div className="flex flex-col space-y-2">
+              <HashLink
+                to="/#about"
+                smooth
+                className="text-gray-300 hover:text-white font-body block py-2 px-4"
+                onClick={toggleMobileMenu}
+              >
+                About
+              </HashLink>
+              <HashLink
+                to="/#projects"
+                smooth
+                className="text-gray-300 hover:text-white font-body block py-2 px-4"
+                onClick={toggleMobileMenu}
+              >
+                Projects
+              </HashLink>
+              <HashLink
+                to="/#services"
+                smooth
+                className="text-gray-300 hover:text-white font-body block py-2 px-4"
+                onClick={toggleMobileMenu}
+              >
+                Services
+              </HashLink>
+              <motion.button
+                onClick={handleToggle}
+                className={`text-white font-bold py-2 px-4 rounded ${
+                  isDesignerMode
+                    ? `${designerButtonColor} ${designerButtonHoverColor}`
+                    : `${developmentButtonColor} ${developmentButtonHoverColor}`
+                }`}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                {isDesignerMode ? "Development Mode" : "Designer Mode"}
+              </motion.button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

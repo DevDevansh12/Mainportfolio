@@ -11,19 +11,26 @@ const Banner = () => {
     }
   }, []);
 
+  const handleScrollToDiscoverClick = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="bg-gradient-to-b from-[#121212] to-[#0A0A13] text-white min-h-screen flex flex-col justify-center items-center">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <div className="flex space-x-2 mb-4">
             <span className="bg-[#374151] text-gray-300 px-3 py-1 rounded-full text-xs font-mono">
-              next.js
-            </span>
-            <span className="bg-[#374151] text-gray-300 px-3 py-1 rounded-full text-xs font-mono">
               React.js
             </span>
             <span className="bg-[#374151] text-gray-300 px-3 py-1 rounded-full text-xs font-mono">
-              typescript
+              Tailwind CSS
+            </span>
+            <span className="bg-[#374151] text-gray-300 px-3 py-1 rounded-full text-xs font-mono">
+              Node.js
             </span>
           </div>
           <h1 className="text-6xl md:text-8xl font-heading font-black">
@@ -32,12 +39,11 @@ const Banner = () => {
             </span>
           </h1>
           <p className="text-xl mt-4 font-body">
-            An experienced full-stack website developer with a passion for{" "}
-            <br />
-            crafting unique digital experiences.
+            Passionate about leveraging full-stack expertise to create <br />
+            seamless digital experiences that solve real-world problems.
           </p>
           <div className="flex space-x-4 mt-8">
-            <button className="bg-[#6366f1] hover:bg-[#4f46e5] text-gray-300 py-3 px-6 rounded-lg font-bold font-body">
+            <button className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-700 hover:to-orange-800 text-gray-300 py-3 px-6 rounded-lg font-bold font-body">
               Get in touch
             </button>
             <button className="bg-[#374151] hover:bg-[#4b5563] text-gray-300 py-3 px-6 rounded-lg font-bold font-body">
@@ -51,7 +57,10 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="flex mt-12 gap-3 cursor-pointer items-center justify-center">
+      <div
+        className="flex mt-12 gap-3 cursor-pointer items-center justify-center"
+        onClick={handleScrollToDiscoverClick}
+      >
         <div className="text-center text-gray-300 font-body">
           Scroll to discover
         </div>
